@@ -76,13 +76,17 @@ public class ScheduleComparator : IScheduleComparator
 
     }
 
-    public int CompareWorkShifts(IEnumerable<EmployeeWorkShift> employeeWorkShift1, IEnumerable<EmployeeWorkShift> employeeWorkShift2)
+    public int CompareWorkShifts(
+        IEnumerable<EmployeeWorkShift> employeeWorkShift1, 
+        IEnumerable<EmployeeWorkShift> employeeWorkShift2)
     {
         int count = 0;
 
         foreach (var currentShift in employeeWorkShift1)
         {
-            var employeeTwoShift = employeeWorkShift2.FirstOrDefault(e => e.DayOfWeek == currentShift.DayOfWeek);
+            var employeeTwoShift = employeeWorkShift2
+                .FirstOrDefault(e => 
+                e.DayOfWeek == currentShift.DayOfWeek);
 
             if (employeeTwoShift is null)
                 continue;
@@ -104,7 +108,10 @@ public class ScheduleComparator : IScheduleComparator
 
     private bool ValidateNotRepeatedItems(string name1, string name2)
     {
-        return string.Compare(name1, name2, StringComparison.InvariantCultureIgnoreCase) == 0;
+        return string.
+            Compare(name1, 
+            name2, 
+            StringComparison.InvariantCultureIgnoreCase) == 0;
     }
 
     private bool ValidateNotRepeatedItems(ICollection<string> visited, string name1, string name2)
