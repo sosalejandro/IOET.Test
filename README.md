@@ -43,7 +43,7 @@ internal helper statics methods to separete functions and make it readeable code
 
 The purpose of these statics methods is to avoid creating far more coupling with dependencies of classes internally 
 and allow code re-usage within the application, but leaving the solution with a 
-concrete implementation which cannot be overriden.
+concrete implementation which cannot be overriden (at least for static methods).
 
 ## Application publication
 
