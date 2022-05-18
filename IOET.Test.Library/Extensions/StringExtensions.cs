@@ -12,8 +12,6 @@ public static class StringExtensions
 {
     public static List<string> ParseIntoList(this string input)
     {
-        //DaysOfTheWeekPatterns patterns = new("[a-zA-Z]{2}[0-9]{2}:[0-9]{2}-[0-9]{2}:[0-9]{2}$");
-
         var results = input.Split(",").ToList();
 
         return results;
@@ -37,9 +35,6 @@ public static class StringExtensions
 
     private static DayOfWeek GetDayOfTheWeek(this string input)
     {
-        //DaysOfTheWeekPatterns patterns = new("[a-zA-Z]{2}[0-9]{2}:[0-9]{2}-[0-9]{2}:[0-9]{2}$");
-
-
         // NOTES: It could be simplified to use only the first two letters as the case but it would required as setup to 
         // create a variable with the sliced string before hand. It might run quicker, thought. 
         return input switch
