@@ -10,7 +10,7 @@ internal static class TransformationHelper
     /// </summary>
     /// <param name="input"></param>
     /// <returns></returns>
-    public static List<string> ParseStringoIntoInputList(string input)
+    public static List<string> ParseStringIntoInputList(string input)
     {
         var results = input.Split(",").ToList();
 

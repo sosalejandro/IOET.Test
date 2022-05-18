@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 namespace IOET.Test.Library.Models;
 public record Employee
 {
-    private const string NamePattern = "[a-zA-Z]+=([a-zA-Z]{2}[0-9]{2}:[0-9]{2}-[0-9]{2}:[0-9]{2},?)+$";
+    private const string ValidationPattern = "[a-zA-Z]+=([a-zA-Z]{2}[0-9]{2}:[0-9]{2}-[0-9]{2}:[0-9]{2},?)+$";
 
     /// <summary>
     /// Employee Name
@@ -53,7 +53,7 @@ public record Employee
 
 
         ICollection<EmployeeWorkShift> workShifts = new HashSet<EmployeeWorkShift>();
-        var entries = TransformationHelper.ParseStringoIntoInputList(input);
+        var entries = TransformationHelper.ParseStringIntoInputList(input);
 
         foreach (string entry in entries)
         {
@@ -71,7 +71,7 @@ public record Employee
     /// <exception cref="InvalidInputException">Invalid input error</exception>
     private static void ValidateInput(string input)
     {
-        if (!Regex.Match(input, NamePattern).Success)
+        if (!Regex.Match(input, ValidationPattern).Success)
             throw new InvalidInputException(
                 "Cannot parse an invalid input needed to create an Employee.");
     }
