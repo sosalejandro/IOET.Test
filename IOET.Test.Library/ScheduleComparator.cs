@@ -106,6 +106,13 @@ public class ScheduleComparator : IScheduleComparator
         }
     }
 
+    /// <summary>
+    /// Compares if <paramref name="name1"/> and <paramref name="name2"/> aren't the same string, 
+    /// thus referencing the same object.
+    /// </summary>
+    /// <param name="name1"></param>
+    /// <param name="name2"></param>
+    /// <returns><c>Boolean</c></returns>
     private bool ValidateNotRepeatedItems(string name1, string name2)
     {
         return string.
@@ -114,6 +121,14 @@ public class ScheduleComparator : IScheduleComparator
             StringComparison.InvariantCultureIgnoreCase) == 0;
     }
 
+    /// <summary>
+    /// Compares if a combination of string <paramref name="name1"/> and <paramref name="name2"/> 
+    /// is found within the <paramref name="visited"/> collection.
+    /// </summary>
+    /// <param name="visited">Visited collection</param>
+    /// <param name="name1"></param>
+    /// <param name="name2"></param>
+    /// <returns><c>Boolean</c></returns>
     private bool ValidateNotRepeatedItems(ICollection<string> visited, string name1, string name2)
     {
         string caseOne = String.Format($"{name1}-{name2}");
