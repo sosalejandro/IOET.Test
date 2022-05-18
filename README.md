@@ -23,3 +23,10 @@ Why should you be able to put only 1 entry if the idea is to compare, and you ca
 and hashsets to repeat per item but to avoid going into a infinite loop filtering with a hashset. 
 Turning classes into records for in-built override of Equals and GetHashCode methods. 
 Taking advantage of it's value based comparison rather than memory allocation comparison.
+
+## Usage
+
+The application starts and ask for a file path to be prompt. 
+
+The file must be a .txt and it's value must match the RegEx based on the input given by email. 
+Otherwise it will just throw an error into the console and finish the applicaation.
