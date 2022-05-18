@@ -29,4 +29,18 @@ Taking advantage of it's value based comparison rather than memory allocation co
 The application starts and ask for a file path to be prompt. 
 
 The file must be a .txt and it's value must match the RegEx based on the input given by email. 
-Otherwise it will just throw an error into the console and finish the applicaation.
+Otherwise it will just throw an error into the console and finish the application.
+
+## Information about the solution
+
+The solution was built with a simple decoupling using a library class to hold it's core logic to be easily integrated with the application
+(console application)
+
+The test library suit was built using xUnit. 
+
+The architecture tries to avoid too much coupling even though it depends heavily on 
+internal helper statics methods to separete functions and make it readeable code.
+
+The purpose of these statics methods is to avoid creating far more coupling with dependencies of classes internally 
+and allow code re-usage within the application, but leaving the solution with a 
+concrete implementation which cannot be overriden.
