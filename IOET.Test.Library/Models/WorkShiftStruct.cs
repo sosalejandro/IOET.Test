@@ -5,7 +5,7 @@ namespace IOET.Test.Library.Models;
 
 public struct WorkShiftStruct
 {
-    private const string ValidationPattern = "[0-9]{2}:[0-9]{2}-[0-9]{2}:[0-9]{2}$";
+    private const string ValidationPattern = "^[a-zA-Z]{2}[0-9]{2}:[0-9]{2}-[0-9]{2}:[0-9]{2}$";
 
     public TimeSpan Entry;
     public TimeSpan Exit;
