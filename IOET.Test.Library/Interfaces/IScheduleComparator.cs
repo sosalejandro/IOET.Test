@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace IOET.Test.Library.Interfaces;
-public interface IScheduleComparer
+public interface IScheduleComparator
 {
     int CompareWorkShifts(IEnumerable<EmployeeWorkShift> employeeWorkShift1, IEnumerable<EmployeeWorkShift> employeeWorkShift2);
     IEnumerable<Employee> CreateEmployeesFromInputs(List<string> inputs);
