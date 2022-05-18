@@ -6,6 +6,7 @@ using IOET.Test.Library.Models;
 
 Welcome();
 InitProgram();
+PressEnterToContinue();
 
 public partial class Program 
 {
