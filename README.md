@@ -44,3 +44,7 @@ internal helper statics methods to separete functions and make it readeable code
 The purpose of these statics methods is to avoid creating far more coupling with dependencies of classes internally 
 and allow code re-usage within the application, but leaving the solution with a 
 concrete implementation which cannot be overriden.
+
+## Application publication
+
+The application can be compiled through Visual Studio and published using the "folder" option. 
